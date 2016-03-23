@@ -1,5 +1,7 @@
 export default class LoginForm {
-  constructor(x, email) {
+  constructor(form, email) {
+    this.form = form;
+
     this.userDirectory = [
       { username: `aaron@theironyard.com`, password: `password123` },
       { username: `admin@google.com`, password: `pandas` },
@@ -21,4 +23,19 @@ export default class LoginForm {
 
     return this.userDirectory.reduce(findValid, false);
   }
+
+  validateInputs() {
+    const emailInput = this.form.querySelector(`.login-form__email`).value;
+    const passwordInput = this.form.querySelector(`.login-form__password`).value;
+    const valMsg = this.form.querySelector(`.login-form__validation-message`);
+    if (this.validate(emailInput, passwordInput)) {
+      valMsg.innerText = ``;
+    }
+    else {
+      valMsg.innerText = `The credentials are invalid`
+    }
+
+
+  }
+
 }
