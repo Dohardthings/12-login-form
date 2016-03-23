@@ -1,6 +1,11 @@
 export default class LoginForm {
   constructor(form, email) {
     this.form = form;
+    this.form.addEventListener(`submit`, (ev) => {
+      ev.preventDefault();
+      this.validateInputs();
+    });
+
 
     this.userDirectory = [
       { username: `aaron@theironyard.com`, password: `password123` },
@@ -28,19 +33,11 @@ export default class LoginForm {
     const emailInput = this.form.querySelector(`.login-form__email`).value;
     const passwordInput = this.form.querySelector(`.login-form__password`).value;
     const valMsg = this.form.querySelector(`.login-form__validation-message`);
+
     if (this.validate(emailInput, passwordInput)) {
       valMsg.innerText = ``;
-    }
-    else {
+    } else {
       valMsg.innerText = `The credentials are invalid`;
     }
-
-    this.form.addEventListener(`click`, () =>  {
-      if (`click`) {
-        this.form.validateInputs();
-      }
-    });
-
   }
-
 }
