@@ -32,9 +32,14 @@ export default class LoginForm {
       valMsg.innerText = ``;
     }
     else {
-      valMsg.innerText = `The credentials are invalid`
+      valMsg.innerText = `The credentials are invalid`;
     }
 
+    this.form.addEventListener(`click`, () =>  {
+      if (`click`) {
+        this.form.validateInputs();
+      }
+    });
 
   }
 
