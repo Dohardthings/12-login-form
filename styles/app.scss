@@ -4,3 +4,97 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+
+body {
+  margin: 0;
+}
+.upper-half {
+  background-image: url('bg-login-top.png');
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  margin: auto;
+  margin-bottom: 0;
+
+}
+
+.lower-half {
+  min-height: 50vh;
+  background-image: url('bg-login.png');
+}
+
+.logo {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.login-form {
+  margin: auto;
+
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+
+}
+
+.element-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.button-div {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+
+}
+
+.button {
+  background: #459300;
+  color: white;
+  width: 5rem;
+  padding: .5rem;
+  left: 65%;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+
+}
+
+.login-form__email {
+  width: 70%;
+  height: 2rem;
+  position: relative;
+}
+
+.login-form__password {
+  width: 70%;
+  height: 2rem;
+
+}
+
+.userN {
+margin: 0;
+}
+
+.userP {
+
+}
